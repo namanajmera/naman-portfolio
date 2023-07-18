@@ -1,0 +1,186 @@
+@import '../../less/variable.less';
+
+.contactPage {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+
+    .heading {
+        display      : inline-block;
+        text-align   : center;
+        font-size    : 60px;
+        font-weight  : 700;
+        line-height  : 1.2;
+        color        : @color-lightn;
+        margin-top   : 15px;
+        margin-bottom: 0;
+    }
+
+    .contactDetail {
+        display        : flex;
+        justify-content: space-between;
+        margin         : 30px 0 50px 0;
+
+        .contactInfo {
+            width         : 30%;
+            display       : flex;
+            flex-direction: column;
+            padding       : 30px;
+            box-shadow    : @default-shadow;
+            border-radius : 10px;
+            height        : 100%;
+
+            .thumbnail {
+                margin-bottom: 28px;
+                overflow     : hidden;
+                border-radius: 10px;
+
+                .contactImage {
+                    width         : 100%;
+                    height        : auto;
+                    border-radius : 10px;
+                    border        : 0;
+                    vertical-align: middle;
+                    max-width     : 100%;
+                    transition: @transition-default-value;
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            .title_area {
+                margin-bottom: 15px;
+
+                h4 {
+                    font-size    : 29px;
+                    line-height  : 44px;
+                    color        : @color-lightn;
+                    margin-bottom: 9px;
+                    font-weight  : 700;
+                }
+
+                span {
+                    color    : @color-lightn;
+                    font-size: 16px;
+                }
+            }
+
+            .description {
+                margin-bottom: 39px;
+                color        : @color-lightn;
+                font-family  : @primary-font;
+
+                p {
+                    font-size    : 18px;
+                    font-weight  : 400;
+                    color        : @color-lightn;
+                    font-family  : @primary-font;
+                    line-height  : 30px;
+                    display      : inline-block;
+                    margin-bottom: 20px;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        .contactForm {
+            flex         : 1;
+            padding      : 20px;
+            width        : 70%;
+            box-shadow   : @default-shadow;
+            padding      : 30px;
+            border-radius: 10px;
+            margin-left  : 45px;
+            height       : 100%;
+
+            form {
+                display       : flex;
+                flex-direction: column;
+            }
+
+            input {
+                margin-bottom   : 10px;
+                background-color: #191b1e;
+                border-radius   : 6px;
+                height          : 55px;
+                transition      : @transition-default-value;
+                border          : 2px solid #191b1e;
+                padding         : 0 15px;
+                font-size       : 14px;
+                font-family     : @primary-font;
+                color           : @color-lightn;
+                box-shadow      : 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+                letter-spacing  : 1px;
+                resize          : none;
+            }
+
+            textarea {
+                height          : 200px;
+                background-color: #191b1e;
+                border-radius   : 6px;
+                transition      : @transition-default-value;
+                border          : 2px solid #191b1e;
+                padding         : 10px 15px;
+                font-size       : 14px;
+                font-family     : @primary-font;
+                color           : @color-lightn;
+                box-shadow      : 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+                letter-spacing  : 1px;
+                resize          : none;
+            }
+
+            button {
+                margin-top      : 20px;
+                border          : none;
+                cursor          : pointer;
+                border-radius   : 6px;
+                background      : linear-gradient(145deg, #1e2024, #23272b);
+                box-shadow      : @default-shadow;
+                transition      : @transition-default-value;
+                font-size       : 14px;
+                font-weight     : 500;
+                border          : 0 none;
+                display         : inline-block;
+                padding         : 15px 35px;
+                list-style      : none;
+                text-decoration : none;
+                color           : @color-secondary;
+                text-transform: uppercase;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    transition: @transition-default-value;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 6px;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(to right bottom, #212428, #16181c);
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+
+            .socialMediaButtons {
+                display        : flex;
+                justify-content: space-between;
+                margin-top     : 20px;
+            }
+
+            .socialMediaButton {
+                padding         : 10px;
+                background-color: #007bff;
+                color           : #fff;
+                border          : none;
+                border-radius   : 4px;
+                cursor          : pointer;
+                width           : 100px;
+            }
+        }
+    }
+}

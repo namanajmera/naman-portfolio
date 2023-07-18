@@ -1,0 +1,138 @@
+@import '../../less/variable.less';
+
+.container {
+    display        : flex;
+    width          : 100%;
+    justify-content: center;
+    align-items    : center;
+    margin-bottom  : 30px;
+
+    .containerLeft {
+        width         : 526.25px;
+        display       : flex;
+        flex-direction: column;
+        height        : 100%;
+
+        .information {
+            padding      : 35px;
+            height       : 350px;
+            box-shadow   : @default-shadow;
+            margin-bottom: 10%;
+
+            .userInfoHeader {
+                .profileImage {
+                    width : 29px;
+                    height: auto;
+                }
+
+                .user {
+                    .info1 {
+                        color         : @color-lightn;
+                        letter-spacing: 3px;
+                    }
+                }
+
+                .selfInfo,
+                .feature {
+                    color        : #ffffff;
+                    font-weight  : 700;
+                    font-size    : 40px;
+                    line-height  : 62px;
+                    margin-bottom: 11px;
+                    font-family  : @primary-font;
+
+                    span {
+                        color: @color-secondary;
+                    }
+                }
+
+                .feature {
+                    color: @color-secondary;
+                }
+
+                .desc {
+                    font-family: @primary-font;
+                    font-size  : 16px;
+                    color      : @color-lightn;
+                    line-height: 24px;
+                }
+            }
+
+            .userInfoFooter {
+                display        : flex;
+                justify-content: center;
+                flex-direction : column;
+                line-height    : 1.7em;
+                margin-top     : 10px;
+
+                .info {
+                    display    : flex;
+                    align-items: center;
+                    margin     : 5px 10px 0 0;
+                    color      : @color-lightn;
+                    font-size  : 16px;
+
+                    svg {
+                        color: @color-secondary;
+                    }
+
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            padding      : 35px;
+            height       : 90px;
+            border-radius: 0 0 10px 10px;
+            box-shadow   : @default-shadow;
+
+            .dataInfo {
+                display        : flex;
+                justify-content: space-between;
+                flex-direction : column;
+                height         : 100%;
+
+                p {
+                    color    : @color-lightn;
+                    font-size: 16px;
+                }
+
+                .action {
+                    display: flex;
+
+                    button {
+                        margin-left  : 30px;
+                        border-radius: 6px;
+                        background   : linear-gradient(145deg, #1e2024, #23272b);
+                        box-shadow   : @default-shadow;
+                        font-size    : 14px;
+                        font-weight  : 500;
+                        border       : 0 none;
+                        cursor       : pointer;
+                        width        : 170px;
+                        height       : 51px;
+                    }
+                }
+            }
+        }
+    }
+
+    .containerRight {
+        margin-left  : 8%;
+        width        : 748.75px;
+        height       : 560px;
+        padding      : 34px;
+        border-radius: 10px;
+        box-shadow   : @default-shadow;
+
+        .imageView {
+            width        : 100%;
+            height       : 100%;
+            border-radius: 8px;
+            object-fit   : cover;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '../../less/variable.less';
+
+.skill_bar {
+    margin: 10px;
+    width : 45%;
+
+    .title {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        color          : @color-lightn;
+
+        .skill_name {
+            margin-bottom : 5px;
+            font-weight   : 400;
+            letter-spacing: 1px;
+            margin-bottom : 10px;
+        }
+
+        .percentage {
+            font-weight: 200;
+        }
+    }
+
+    .bar_container {
+        border-radius: 5px;
+        height       : 10px;
+        overflow     : visible;
+        font-size    : 14px;
+        border-radius: 10px;
+        padding      : 3px;
+        background   : #212428;
+        box-shadow   : inset 8px 8px 16px rgba(0, 0, 0, 0.4588235294), inset -8px -8px 16px rgba(56, 62, 69, 0.4588235294);
+
+        .bar {
+            height             : 100%;
+            overflow           : visible;
+            position           : relative;
+            border-radius      : 14px;
+            background         : linear-gradient(145deg, #f02981 0%, #c81901 100%);
+            animation-duration : 1s;
+            animation-delay    : 0.1s;
+            animation-name     : fadeInLeft;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        width  : 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
